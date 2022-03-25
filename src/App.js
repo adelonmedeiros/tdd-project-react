@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Dropdown } from "./components/dropdown/Dropdown.js";
+import React, { useState } from "react";
 
 function App() {
+  const [selectedProduct, setselectedProduct] = useState(null);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Dropdown
+        title="Medicamentos"
+        options={["Dorflex", "Doralgina", "Neosaldina", "Dipirona"]}
+        onSelect={setselectedProduct}
+      />
+
+      {selectedProduct && (
+        <div className="selected-iten">
+          Produto selecionado: {selectedProduct}
+        </div>
+      )}
     </div>
   );
 }
