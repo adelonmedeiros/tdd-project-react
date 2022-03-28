@@ -14,7 +14,7 @@ function App() {
 
       {selectedProduct && (
         <div className="selected-iten">
-          Produto selecionado: {selectedProduct}
+          <p>Selecionado: {selectedProduct}</p>
         </div>
       )}
     </div>

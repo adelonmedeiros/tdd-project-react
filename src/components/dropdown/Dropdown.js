@@ -2,7 +2,7 @@
  * @Funcionalidades
  * 1. Dropdown vai começar fechado
  * 2. Exibir as opções de produto ao ser clicado
- * 3. Fechar o dropdown ao selecionar o item, exibir o valor selecionado
+ * 3. Fechar o dropdown ao selecionar o item
  * */
 
 import React, { useState } from "react";
